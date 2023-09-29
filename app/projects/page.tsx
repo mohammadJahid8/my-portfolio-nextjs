@@ -66,16 +66,42 @@ export default async function Projects() {
                 {project.overview}
               </p>
 
-              <a
-                href={project.live_link}
-                target="_blank"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
-              >
-                Learn More!
-                <span className="block transition-all group-hover:ms-0.5">
-                  &rarr;
-                </span>
-              </a>
+              <div className="flex justify-between">
+                <a
+                  href={project.live_link}
+                  target="_blank"
+                  className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                >
+                  Live
+                  <span className="block transition-all group-hover:ms-0.5">
+                    &rarr;
+                  </span>
+                </a>
+                {project.server_code && (
+                  <a
+                    href={project.client_code}
+                    target="_blank"
+                    className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                  >
+                    Client
+                    <span className="block transition-all group-hover:ms-0.5">
+                      &rarr;
+                    </span>
+                  </a>
+                )}
+                {project.server_code && (
+                  <a
+                    href={project.server_code}
+                    target="_blank"
+                    className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500"
+                  >
+                    Server
+                    <span className="block transition-all group-hover:ms-0.5">
+                      &rarr;
+                    </span>
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}
