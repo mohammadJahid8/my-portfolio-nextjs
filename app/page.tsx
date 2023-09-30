@@ -24,6 +24,13 @@ export default function Home() {
           <p className="text-gray-500 dark:text-gray-300 text-center">
             Full Stack Developer
           </p>
+          <a
+            href="/Jahids_resume_full_stack.pdf"
+            download="Jahids_resume_full_stack"
+            className="text-sm font-medium text-teal-500"
+          >
+            My Resume
+          </a>
 
           <div className="flex space-x-5 pt-6">
             <a
