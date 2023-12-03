@@ -12,14 +12,15 @@ interface Data {
 }
 
 async function getProjects() {
-  const query = `*[_type == "project"] {
+  const query = `*[_type == "project"] | order(_createdAt desc) {
     title,
-      overview,
-      server_code,
-      client_code,
-      live_link,
-      _id,
-      "imageUrl": image.asset->url
+    overview,
+    server_code,
+    client_code,
+    live_link,
+    _id,
+    _createdAt,
+    "imageUrl": image.asset->url
   }`;
 
   const data = await client.fetch(query);
@@ -31,6 +32,7 @@ export const revalidate = 60;
 
 export default async function Projects() {
   const data: Data[] = await getProjects();
+  console.log(data);
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -41,7 +43,7 @@ export default async function Projects() {
       </div>
 
       <div className="grid gap-y-8 sm:gap-6  sm:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-10 pt-8">
-        {data.map((project) => (
+        {data?.map((project) => (
           <article
             key={project._id}
             className="overflow-hidden dark:border-zinc-600 rounded-lg border border-gray-100 bg-white shadow-lg dark:bg-black dark:shadow-gray-700 shadow-teal-100"

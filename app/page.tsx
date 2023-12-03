@@ -25,8 +25,9 @@ export default function Home() {
             Full Stack Developer
           </p>
           <a
-            href="/Jahids_resume_full_stack.pdf"
-            download="Jahids_resume_full_stack"
+            href="https://drive.google.com/file/d/1yXV-FNmx1eJQrrf3rI3r01m2mgvsRFn-/view"
+            target="_blank"
+            // download="Jahids_resume_full_stack"
             className="text-sm font-medium text-teal-500"
           >
             My Resume
