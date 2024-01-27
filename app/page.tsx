@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import Me from "@/public/MyImage.png";
 
 export default function Home() {
   return (
@@ -15,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col items-center pt-8">
           <Image
             alt="Picture of Mohammad Jahid"
-            src={Me}
+            src="/MyImage.png"
             className="h-48 w-48 rounded-full object-cover object-top"
           />
           <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
@@ -25,7 +24,7 @@ export default function Home() {
             Full Stack Developer
           </p>
           <a
-            href="https://drive.google.com/file/d/1yXV-FNmx1eJQrrf3rI3r01m2mgvsRFn-/view"
+            href="https://drive.google.com/file/d/1EfsSXv85nGEqBEo6SkXaOTMZ9VAIlfhg/view?usp=drive_link"
             target="_blank"
             // download="Jahids_resume_full_stack"
             className="text-sm font-medium text-teal-500"
@@ -65,7 +64,7 @@ export default function Home() {
 
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
           <p>
-            Hello everyone, I'm Jahid, a 22-year-old Full Stack developer based
+            Hello everyone, I'm Jahid, a passionate Full Stack developer, based
             in Bangladesh.
           </p>
           <p>
@@ -75,16 +74,20 @@ export default function Home() {
             server-side logic and seamless database interactions.
           </p>
           <p>
-            Presently, I serve as a full stack developer at MocDT, collaborating
-            closely with design and backend teams to bring visually appealing
-            and user-friendly web applications to life. I rely on technologies
-            like React.js, Next.js, Node.js, Express, and MongoDB, and I harness
-            the power of UI frameworks and libraries such as Tailwind CSS,
-            Material UI, Shadecn Ui and Ant Design to elevate the aesthetics and
-            functionality of web pages. I thrive on challenging projects that
-            foster continuous learning and skill expansion. I'm always open to
-            discussing potential projects, job opportunities, or simply engaging
-            in a meaningful conversation. Feel free to reach out!
+            Presently, I serve as a Frontend developer at{" "}
+            <a href="https://bording.dk/" target="_blank">
+              Bording Danmark
+            </a>
+            , collaborating closely with design teams to bring visually
+            appealing and user-friendly web applications to life. I rely on
+            technologies like React.js, Next.js, Remix.js, Node.js, Express, and
+            MongoDB, and I harness the power of UI frameworks and libraries such
+            as Tailwind CSS, Material UI, Shadecn Ui and Ant Design to elevate
+            the aesthetics and functionality of web pages. I thrive on
+            challenging projects that foster continuous learning and skill
+            expansion. I'm always open to discussing potential projects, job
+            opportunities, or simply engaging in a meaningful conversation. Feel
+            free to reach out!
           </p>
         </div>
       </div>
